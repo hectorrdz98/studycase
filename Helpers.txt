@@ -1,0 +1,49 @@
+interface GigabitEthernet0/0.10
+ description Default Gateway for VLAN 10
+ encapsulation dot1Q 10
+ ip address 172.31.255.254 255.255.254.0
+ standby 10 ip 172.31.255.250
+ standby 10 priority 150
+ standby 10 preempt
+!
+interface GigabitEthernet0/0.20
+ description Default Gateway for VLAN 20
+ encapsulation dot1Q 20
+ ip address 172.31.253.254 255.255.255.0
+ standby 20 ip 172.31.253.250
+ standby 20 priority 150
+ standby 20 preempt
+!
+interface GigabitEthernet0/0.30
+ description Default Gateway for VLAN 30
+ encapsulation dot1Q 30
+ ip address 172.31.252.254 255.255.255.0
+ standby 30 ip 172.31.252.250
+ standby 30 priority 150
+ standby 30 preempt
+!
+interface GigabitEthernet0/0.40
+ description Default Gateway for VLAN 40
+ encapsulation dot1Q 40
+ ip address 172.31.251.254 255.255.255.128
+ standby 40 ip 172.31.251.250
+ standby 40 priority 150
+ standby 40 preempt
+!
+interface GigabitEthernet0/0.50
+ description Default Gateway for VLAN 50
+ encapsulation dot1Q 50
+ ip address 172.31.251.126 255.255.255.240
+ standby 50 ip 172.31.251.122
+ standby 50 priority 150
+ standby 50 preempt
+!
+
+
+
+
+network 172.31.254.0
+network 172.31.253.0
+network 172.31.252.0
+network 172.31.251.128
+network 172.31.251.112
